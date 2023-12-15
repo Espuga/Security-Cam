@@ -1,12 +1,9 @@
 import cv2
 
 class Camara:
-    def __init__(self, user, passwd, cam):
-        self.cam = cam
-        if cam == "Balcony":
-            url = f"rtsp://{user}:{passwd}@192.168.1.103/video"
-        elif cam == "Garage":
-            url = f"rtsp://{user}:{passwd}@192.168.1.142/video"
+    def __init__(self, user, passwd, ip):
+        self.cam = ip
+        url = f"rtsp://{user}:{passwd}@{ip}/video"
         self.cap = cv2.VideoCapture(url)
 
     def activarCamara(self):
