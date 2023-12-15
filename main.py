@@ -1,6 +1,6 @@
 import sys
 
-from camara import Camara
+from camera import Camera
 
 if __name__ == "__main__":
     if len(sys.argv) <= 3:
@@ -10,5 +10,5 @@ if __name__ == "__main__":
         user = sys.argv[1]
         passwd = sys.argv[2]
         ip = sys.argv[3]
-        cam = Camara(user, passwd, ip)
-        cam.activarCamara()
+        cam = Camera(user, passwd, ip)
+        cam.turnOn()
